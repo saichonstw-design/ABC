@@ -1,0 +1,18 @@
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Open = Instance.new("TextButton")
+Open.Size = UDim2.new(0,60,0,60)
+Open.Position = UDim2.new(0,10,0.5,-30)
+Open.Text = "⚙"
+Open.Parent = ScreenGui
+
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0,300,0,200)
+Frame.Position = UDim2.new(0.5,-150,0.5,-100)
+Frame.Visible = false
+Frame.Parent = ScreenGui
+
+Open.MouseButton1Click:Connect(function()
+	Frame.Visible = not Frame.Visible
+end)
